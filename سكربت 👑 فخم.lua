@@ -368,7 +368,7 @@ if gg.isPackageInstalled("com.antiban.f5mplus") or
   gg.isPackageInstalled("com.f5m")  then
 
 gg.alert("👑مرحبا بك في هاك فخم للتواصل @F5MVIP👑", "التالي ")
-gg.alert("F5M", "التالي ")
+gg.alert("MRSHIDO", "التالي ")
 function HOME()
 SN = gg.choice({
 	 "l⁦⁦☄️ (( 🌠ترسيت سريع في القيم🌠 ))☄️ ⁦⁦🌠",
