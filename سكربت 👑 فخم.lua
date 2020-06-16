@@ -514,7 +514,8 @@ if NO == nil then
       GG()
     end
     end
-  iBug = -1
+  PUBGMH = -1
+		
 end
 
 function CHIPSET()
@@ -1203,7 +1204,7 @@ if NO == nil then
       CLCHIPSET()
     end
     end
-  iBug = -1
+  PUBGMH = -1
 end
 
 function CLCHIPSET()
