@@ -467,18 +467,21 @@ end
 
 
 function L2()
-gg.refineNumber("144387", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-gg.refineNumber("144387", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-gg.refineNumber("144387", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-gg.refineNumber("144387", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-t =gg.getResults(gg.getResultsCount())
-		for i, v in ipairs(t) do
- if v.flags == gg.TYPE_QWORD then
-  v.value = "0"
-  v.freeze = true
- end
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("-3,898,120,890,604,178,429", gg.TYPE_QWORD, false, gg.SIGN_EQUAL, 0, -1)
+
+revert = gg.getResults(gg.getResultsCount())
+local t = gg.getResults(gg.getResultsCount())
+for i, v in ipairs(t) do
+	if v.flags == gg.TYPE_QWORD then
+		v.value = "0"
+		v.freeze = true
+	end
 end
 gg.addListItems(t)
+t = nil
+
+
 
 gg.clearResults()
 gg.alert("Bʏ Pᴀss Lᴏɢɪɴ Completed Bypass Training Initiated")
