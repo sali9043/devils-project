@@ -467,7 +467,6 @@ end
 
 
 function L2()
-
 gg.refineNumber("144387", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.refineNumber("144387", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 n = gg.getResultCount()
@@ -481,9 +480,7 @@ freeze = true,
 value = 0
 }
 })
-
-
-
+end
 gg.clearResults()
 gg.alert("Bʏ Pᴀss Lᴏɢɪɴ Completed Bypass Training Initiated")
 end
@@ -514,22 +511,13 @@ n = gg.getResultCount()
 jz = gg.getResults(n)
 
 for i = 1, n do
-
-GGALD({
-
-[1] = {
-
+GGALD({[1] = {
 address = jz[i].address + 4,
-
 flags = gg.TYPE_QWORD,
-
 freeze = true,
-
 value = 0
-
-}
-
-})
+}})
+		end
 gg.clearResults()
 gg.alert("BʏPᴀss Gᴀᴍᴇ Dᴏɴᴇ")
 end
