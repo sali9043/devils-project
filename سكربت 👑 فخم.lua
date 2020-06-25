@@ -472,6 +472,13 @@ gg.refineNumber("144387", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.refineNumber("144387", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.refineNumber("144387", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 t =gg.getResults(gg.getResultsCount())
+		for i, v in ipairs(t) do
+ if v.flags == gg.TYPE_QWORD then
+  v.value = "0"
+  v.freeze = true
+ end
+end
+gg.addListItems(t)
 gg.addListItems(t)
 gg.clearResults()
 gg.alert("Bʏ Pᴀss Lᴏɢɪɴ Completed Bypass Training Initiated")
