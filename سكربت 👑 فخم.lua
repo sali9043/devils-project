@@ -479,7 +479,7 @@ t =gg.getResults(gg.getResultsCount())
  end
 end
 gg.addListItems(t)
-gg.addListItems(t)
+
 gg.clearResults()
 gg.alert("Bʏ Pᴀss Lᴏɢɪɴ Completed Bypass Training Initiated")
 end
