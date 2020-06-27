@@ -423,10 +423,383 @@ st=gg.choice({
 }, nil, "╔─━━━━━━━━░░ 🌠F5M🌠 ░░━━━━━━━━─╗")
 if st==1 then st1()end
 if st==2 then st2()end
-if st==3 then st3()end
+if st==3 then st4()end
 if st==4 then HOME()end
 PUBGMH =-1
 end
+	
+	
+	function st4()
+GR = gg.multiChoice({
+"1-تفعيل عند تسجيل الدخول",
+"2-تفعيل لوبي",
+"3-تفعيل بالتدريب",
+"4-تفعيل لوبي بعد الخروج من التدريب",
+"◄⎋ رجوع ►",
+},nil,"╔─━━━━━━━━░░ 🌠F5M🌠 ░░━━━━━━━━─╗")               
+if GR == nil then
+else
+if GR[1] == true then 
+L1()end
+if GR[2] == true then 
+L2()end
+if GR[3] == true then 
+TRAIN1()end
+if GR[4] == true then 
+L3()end
+if GR[5] == true then
+ vvpn()end
+PUBGMH = -1
+end
+end
+
+function NotXSplit(szFullString, szSeparator) local nFindStartIndex = 1 local nSplitIndex = 1 local nSplitArray = {} while true do local nFindLastIndex = string.find (szFullString, szSeparator, nFindStartIndex) if not nFindLastIndex then nSplitArray[nSplitIndex] = string.sub(szFullString, nFindStartIndex, string.len (szFullString)) break end nSplitArray[nSplitIndex] = string.sub (szFullString, nFindStartIndex, nFindLastIndex - 1) nFindStartIndex = nFindLastIndex + string.len (szSeparator) nSplitIndex = nSplitIndex + 1 end return nSplitArray end function NotXGC(NotXSZ, xXNotXx) for x = 1, #(xXNotXx) do xgpy = NotXSZ + xXNotXx[x]["NᴏᴛXOғғ"] xglx = xXNotXx[x]["NᴏᴛXTʏᴘᴇ"] xgsz = xXNotXx[x]["NᴏᴛXFɪɴᴅ"] xgdj = xXNotXx[x]["NᴏᴛXFʀᴇᴇᴢᴇ"] if xgdj == nil or xgdj == "" then gg.setValues({[1] = {address = xgpy, flags = xglx, value = xgsz}}) else gg.addListItems({[1] = {address = xgpy, flags = xglx, freeze = xgdj, value = xgsz}}) end xgsl = xgsl + 1 xgjg = true end end function XNotX(XxXNotXxX) gg.clearResults() gg.setRanges(XxXNotXxX[1]["NᴏᴛXRᴀɴɢᴇ"]) gg.searchNumber(XxXNotXxX[3]["NᴏᴛXFɪɴᴅ"], XxXNotXxX[3]["NᴏᴛXTʏᴘᴇ"]) if gg.getResultCount() == 0 then gg.toast("\n" .. XxXNotXxX[2]["NᴏᴛXSᴇᴀʀᴄʜ"] .. " \n Vᴀʟᴜᴇ Nᴏᴛ Fᴏᴜɴᴅ") else gg.refineNumber(XxXNotXxX[3]["NᴏᴛXFɪɴᴅ"], XxXNotXxX[3]["NᴏᴛXTʏᴘᴇ"]) gg.refineNumber(XxXNotXxX[3]["NᴏᴛXFɪɴᴅ"], XxXNotXxX[3]["NᴏᴛXTʏᴘᴇ"]) gg.refineNumber(XxXNotXxX[3]["NᴏᴛXFɪɴᴅ"], XxXNotXxX[3]["NᴏᴛXTʏᴘᴇ"]) gg.refineNumber(XxXNotXxX[3]["NᴏᴛXFɪɴᴅ"], XxXNotXxX[3]["NᴏᴛXTʏᴘᴇ"]) if gg.getResultCount() == 0 then gg.toast("\n" .. XxXNotXxX[2]["NᴏᴛXSᴇᴀʀᴄʜ"] .. " \nVᴀʟᴜᴇ Nᴏᴛ Fᴏᴜɴᴅ") else sl = gg.getResults(999999) sz = gg.getResultCount() xgsl = 0 if sz > 999999 then sz = 999999 end for i = 1, sz do pdsz = true for v = 4, #(XxXNotXxX) do if pdsz == true then pysz = {} pysz[1] = {} pysz[1].address = sl[i].address + XxXNotXxX[v]["NᴏᴛXOғғ"] pysz[1].flags = XxXNotXxX[v]["NᴏᴛXTʏᴘᴇ"] NotXSZ = gg.getValues(pysz) pdpd = XxXNotXxX[v]["NᴏᴛXRᴇғɪɴᴅ"] .. ";" .. NotXSZ[1].value szpd = NotXSplit(pdpd, ";") tzszpd = szpd[1] pyszpd = szpd[2] if tzszpd == pyszpd then pdjg = true pdsz = true else pdjg = false pdsz = false end end end if pdjg == true then NotXSZ = sl[i].address NotXGC(NotXSZ, xXNotXx) end end if xgjg == true then gg.toast("\n" .. XxXNotXxX[2]["NᴏᴛXSᴇᴀʀᴄʜ"] .. "\n Vᴀʟᴜᴇ Fᴏᴜɴᴅ" .. xgsl .. "") else gg.toast("\n" .. XxXNotXxX[2]["NᴏᴛXSᴇᴀʀᴄʜ"] .. "\n Vᴀʟᴜᴇ Nᴏᴛ Fᴏᴜɴᴅ") end end end end function SearchWrite(Search, Write, Type) gg.clearResults() gg.setVisible(false) gg.searchNumber(Search[1][1], Type) local count = gg.getResultCount() local result = gg.getResults(count) gg.clearResults() local data = {} local base = Search[1][2] if (count > 0) then for i, v in ipairs(result) do v.isUseful = true end for k=2, #Search do local tmp = {} local offset = Search[k][2] - base local num = Search[k][1] for i, v in ipairs(result) do tmp[#tmp+1] = {} tmp[#tmp].address = v.address + offset tmp[#tmp].flags = v.flags end tmp = gg.getValues(tmp) for i, v in ipairs(tmp) do if ( tostring(v.value) ~= tostring(num) ) then result[i].isUseful = false end end end for i, v in ipairs(result) do if (v.isUseful) then data[#data+1] = v.address end end if (#data > 0) then local t = {} local base = Search[1][2] for i=1, #data do for k, w in ipairs(Write) do offset = w[2] - base t[#t+1] = {} t[#t].address = data[i] + offset t[#t].flags = Type t[#t].value = w[1] if (w[3] == true) then local item = {} item[#item+1] = t[#t] item[#item].freeze = true gg.addListItems(item) end end end gg.setValues(t) gg.toast("\n Aᴄᴛɪᴠᴀᴛᴇᴅ Sᴜᴄᴄᴇss \n Vᴀʟᴜᴇ Fᴏᴜɴᴅ " ..#t.. "") gg.addListItems(t) else gg.toast("\n Aᴄᴛɪᴠᴀᴛᴇᴅ Fᴀɪʟᴇᴅ\n Vᴀʟᴜᴇ Nᴏᴛ Fᴏᴜɴᴅ", false) return false end else gg.toast("\n Aᴄᴛɪᴠᴀᴛᴇᴅ Fᴀɪʟᴇᴅ\n Vᴀʟᴜᴇ Nᴏᴛ Fᴏᴜɴᴅ") return false end end local gg = gg
+
+function L1()
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("144387", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.refineNumber("144387", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.refineNumber("144387", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.refineNumber("144387", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+if gg.getResultCount() == 228 or 229 or 932 or 933 then
+while true do
+NotXAnuLogin = gg.alert('Vᴀʟᴜᴇ FᴏᴜNᴅ')
+os.exit()
+end
+else
+gg.alert('Vᴀʟᴜᴇ Nᴏᴛ Fᴏᴜɴᴅ')
+os.exit()
+end
+end
+
+function L2()
+gg.refineNumber("144387", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.refineNumber("144387", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.refineNumber("144387", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.refineNumber("144387", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+local NotXRapz = gg.getResults(140701)
+for i, v in ipairs(NotXRapz) do
+    NotXRapz[i].flags = gg.TYPE_QWORD
+    NotXRapz[i].value = '0'
+    NotXRapz[i].freeze = true
+end
+gg.addListItems(NotXRapz)
+gg.clearResults()
+gg.alert('Bʏ Pᴀss Lᴏɢɪɴ Completed \n Bypass Training Initiated')
+os.exit()
+end
+
+function TRAIN1()
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("144387", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.refineNumber("144387", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.refineNumber("144387", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.refineNumber("144387", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+if gg.getResultCount() == 0 then
+gg.alert('Vᴀʟᴜᴇ Nᴏᴛ Fᴏᴜɴᴅ \n           Pʟᴇᴀsᴇ Rᴇsᴛᴀʀᴛ Gᴀᴍᴇ')
+os.exit()
+else
+NotXAnuGame = gg.alert('Vᴀʟᴜᴇ Fᴏᴜɴᴅ')
+TRAIN2()
+end
+end
+
+function TRAIN2()
+gg.refineNumber("144387", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.refineNumber("144387", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.refineNumber("144387", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.refineNumber("144387", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+local NotXRapz = gg.getResults(140701)
+for i, v in ipairs(NotXRapz) do
+    NotXRapz[i].flags = gg.TYPE_QWORD
+    NotXRapz[i].value = '0'
+    NotXRapz[i].freeze = true
+end
+gg.addListItems(NotXRapz)
+gg.clearResults()
+gg.alert('BʏPᴀss Gᴀᴍᴇ Dᴏɴᴇ')
+os.exit()
+end
+
+function L3()
+gg.clearResults()
+gg.clearResults()
+gg.setVisible(false)
+gg.clearResults()
+gg.setVisible(false)
+gg.clearResults()
+gg.setVisible(false)
+gg.clearResults()
+gg.setVisible(false)
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("1401", gg.TYPE_QWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.refineNumber("1401", gg.TYPE_QWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.refineNumber("1401", gg.TYPE_QWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.clearResults()
+gg.setVisible(false)
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("133378", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("133378", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.refineNumber("133378", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+local NotXRapz = gg.getResults(140701)
+for i, v in ipairs(NotXRapz) do
+    NotXRapz[i].flags = gg.TYPE_DWORD
+    NotXRapz[i].value = '0'
+    NotXRapz[i].freeze = true
+end
+gg.addListItems(NotXRapz)
+gg.clearResults()
+gg.setVisible(false)
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("67109633", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("67109633", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.refineNumber("67109633", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+local NotXRapz = gg.getResults(140701)
+for i, v in ipairs(NotXRapz) do
+    NotXRapz[i].flags = gg.TYPE_QWORD
+    NotXRapz[i].value = '0'
+    NotXRapz[i].freeze = true
+end
+gg.clearResults()
+gg.setVisible(false)
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("134658", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("134658", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.refineNumber("134658", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+local NotXRapz = gg.getResults(140701)
+for i, v in ipairs(NotXRapz) do
+    NotXRapz[i].flags = gg.TYPE_DWORD
+    NotXRapz[i].value = '0'
+    NotXRapz[i].freeze = true
+end
+gg.addListItems(NotXRapz)
+gg.clearResults()
+gg.setVisible(false)
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("134914", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("134914", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.refineNumber("134914", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+local NotXRapz = gg.getResults(140701)
+for i, v in ipairs(NotXRapz) do
+    NotXRapz[i].flags = gg.TYPE_DWORD
+    NotXRapz[i].value = '0'
+    NotXRapz[i].freeze = true
+end
+gg.addListItems(NotXRapz)
+gg.clearResults()
+gg.setVisible(false)
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("70658", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("70658", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.refineNumber("70658", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+local NotXRapz = gg.getResults(140701)
+for i, v in ipairs(NotXRapz) do
+    NotXRapz[i].flags = gg.TYPE_DWORD
+    NotXRapz[i].value = '0'
+    NotXRapz[i].freeze = true
+end
+gg.clearResults()
+gg.setVisible(false)
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("133378", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("133378", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.refineNumber("133378", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+local NotXRapz = gg.getResults(140701)
+for i, v in ipairs(NotXRapz) do
+    NotXRapz[i].flags = gg.TYPE_DWORD
+    NotXRapz[i].value = '0'
+    NotXRapz[i].freeze = true
+end
+gg.addListItems(NotXRapz)
+gg.clearResults()
+gg.setVisible(false)
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("67109633", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("67109633", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.refineNumber("67109633", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+local NotXRapz = gg.getResults(140701)
+for i, v in ipairs(NotXRapz) do
+    NotXRapz[i].flags = gg.TYPE_QWORD
+    NotXRapz[i].value = '0'
+    NotXRapz[i].freeze = true
+end
+gg.clearResults()
+gg.setVisible(false)
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("134658", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("134658", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.refineNumber("134658", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+local NotXRapz = gg.getResults(140701)
+for i, v in ipairs(NotXRapz) do
+    NotXRapz[i].flags = gg.TYPE_DWORD
+    NotXRapz[i].value = '0'
+    NotXRapz[i].freeze = true
+end
+gg.addListItems(NotXRapz)
+gg.clearResults()
+gg.setVisible(false)
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("134914", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("134914", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.refineNumber("134914", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+local NotXRapz = gg.getResults(140701)
+for i, v in ipairs(NotXRapz) do
+    NotXRapz[i].flags = gg.TYPE_DWORD
+    NotXRapz[i].value = '0'
+    NotXRapz[i].freeze = true
+end
+gg.addListItems(NotXRapz)
+gg.clearResults()
+gg.setVisible(false)
+gg.clearResults()
+gg.sleep(1401)
+gg.clearResults()
+gg.setVisible(false)
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("133378", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("133378", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.refineNumber("133378", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+local NotXRapz = gg.getResults(140701)
+for i, v in ipairs(NotXRapz) do
+    NotXRapz[i].flags = gg.TYPE_DWORD
+    NotXRapz[i].value = '0'
+    NotXRapz[i].freeze = true
+end
+gg.addListItems(NotXRapz)
+gg.clearResults()
+gg.setVisible(false)
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("67109633", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("67109633", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.refineNumber("67109633", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+local NotXRapz = gg.getResults(140701)
+for i, v in ipairs(NotXRapz) do
+    NotXRapz[i].flags = gg.TYPE_QWORD
+    NotXRapz[i].value = '0'
+    NotXRapz[i].freeze = true
+end
+gg.clearResults()
+gg.setVisible(false)
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("134658", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("134658", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.refineNumber("134658", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+local NotXRapz = gg.getResults(140701)
+for i, v in ipairs(NotXRapz) do
+    NotXRapz[i].flags = gg.TYPE_DWORD
+    NotXRapz[i].value = '0'
+    NotXRapz[i].freeze = true
+end
+gg.addListItems(NotXRapz)
+gg.clearResults()
+gg.setVisible(false)
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("134914", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("134914", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.refineNumber("134914", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+local NotXRapz = gg.getResults(140701)
+for i, v in ipairs(NotXRapz) do
+    NotXRapz[i].flags = gg.TYPE_DWORD
+    NotXRapz[i].value = '0'
+    NotXRapz[i].freeze = true
+end
+gg.addListItems(NotXRapz)
+gg.clearResults()
+gg.setVisible(false)
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("70658", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("70658", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.refineNumber("70658", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+local NotXRapz = gg.getResults(140701)
+for i, v in ipairs(NotXRapz) do
+    NotXRapz[i].flags = gg.TYPE_DWORD
+    NotXRapz[i].value = '0'
+    NotXRapz[i].freeze = true
+end
+gg.clearResults()
+gg.setVisible(false)
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("133378", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("133378", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.refineNumber("133378", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+local NotXRapz = gg.getResults(140701)
+for i, v in ipairs(NotXRapz) do
+    NotXRapz[i].flags = gg.TYPE_DWORD
+    NotXRapz[i].value = '0'
+    NotXRapz[i].freeze = true
+end
+gg.addListItems(NotXRapz)
+gg.clearResults()
+gg.setVisible(false)
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("67109633", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("67109633", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.refineNumber("67109633", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+local NotXRapz = gg.getResults(140701)
+for i, v in ipairs(NotXRapz) do
+    NotXRapz[i].flags = gg.TYPE_QWORD
+    NotXRapz[i].value = '0'
+    NotXRapz[i].freeze = true
+end
+gg.clearResults()
+gg.setVisible(false)
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("134658", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("134658", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.refineNumber("134658", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+local NotXRapz = gg.getResults(140701)
+for i, v in ipairs(NotXRapz) do
+    NotXRapz[i].flags = gg.TYPE_DWORD
+    NotXRapz[i].value = '0'
+    NotXRapz[i].freeze = true
+end
+gg.addListItems(NotXRapz)
+gg.clearResults()
+gg.setVisible(false)
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("134914", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("134914", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.refineNumber("134914", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+local NotXRapz = gg.getResults(140701)
+for i, v in ipairs(NotXRapz) do
+    NotXRapz[i].flags = gg.TYPE_DWORD
+    NotXRapz[i].value = '0'
+    NotXRapz[i].freeze = true
+end
+gg.addListItems(NotXRapz)
+gg.clearResults()
+gg.setVisible(false)
+gg.clearResults()
+gg.setVisible(false)
+gg.clearResults()
+gg.setVisible(false)
+gg.clearResults()
+gg.setVisible(false)
+gg.clearResults()
+gg.alert('  ◆▬▬▬▬▬▬❴✪❵▬▬▬▬▬▬◆\n                   Bʏ Pᴀss Dᴏɴᴇ \n                Gᴏ Fᴜᴄᴋ Tᴇɴᴄᴇɴᴛ \n  ◆▬▬▬▬▬▬❴✪❵▬▬▬▬▬▬◆')
+end
+
 
 function st1()
 gg.setRanges(gg.REGION_C_ALLOC)
