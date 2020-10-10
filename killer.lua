@@ -14,16 +14,4 @@ function byg()
  function byg2()
  end
 
-
-
-
-
-while true do
-  if gg.isVisible(true) then
-KPUBGM = 1
-gg.setVisible(false)
-  end
-  gg.clearResults()
-  if KPUBGM == 1 then b1()
-  end
-end
+b1()
