@@ -1,15 +1,22 @@
 function b1()
-d1=gg.alert("Choose One Bypass and Play Which Work For you.","okay"
-if d1 == 1 then a1()end
- KPUBGM = -1
-end
-
-fucntion a1()
-menu2 = gg.choice({
-menu2 = gg.choice({
-
- function bypass3()
+ aa=gg.choice({
+   "Bypass Global v1",
+   "Bypass korea v2",
+   "back"},nil,"Bypas - Killer PUBG")
+ if aa == 1 then byg() end
+ if aa == 2 then byg2() end
+ if aa == 3 then main() end
+ KPUBGM = 1
  end
+
+function byg()
+ end
+ function byg2()
+ end
+
+
+
+
 
 while true do
   if gg.isVisible(true) then
@@ -17,7 +24,6 @@ KPUBGM = 1
 gg.setVisible(false)
   end
   gg.clearResults()
-  if KPUBGM == 1 then
-b1()
+  if KPUBGM == 1 then b1()
   end
 end
