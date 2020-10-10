@@ -8,6 +8,8 @@ function b1()
  if aa == 3 then main() end
  KPUBGM = 1
  end
+		gg.alert("successfuly connected")
+		b1()
 
 function byg2()
 	local L0_0
@@ -840,5 +842,3 @@ gg.clearResults()
 gg.alert("Activated SuccessFully","Done")
 
  end
-
-b1()
