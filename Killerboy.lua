@@ -1,3 +1,5 @@
+gg.alert("successfully connected")
+
 function b1()
  aa=gg.choice({
    "حمايه العالميه v1 🇦🇪",
