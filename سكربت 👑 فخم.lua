@@ -6,11 +6,9 @@ function b1()
  if aa == 1 then byg() end
  if aa == 2 then byg2() end
  if aa == 3 then main() end
- KPUBGM = 1
+ KPUBGM2 = 1
  end
-		gg.alert("successfuly connected")
-		b1()
-
+		
 function byg2()
 	local L0_0
 function L0_0(A0_1)
@@ -842,3 +840,14 @@ gg.clearResults()
 gg.alert("Activated SuccessFully","Done")
 
  end
+
+while true do
+  if gg.isVisible(true) then
+KPUBGM2 = 1
+gg.setVisible(false)
+  end
+  gg.clearResults()
+  if KPUBGM2 == 1 then
+b1()
+  end
+end
